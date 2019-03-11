@@ -6,7 +6,8 @@
 //  Copyright © 2019  jueying. All rights reserved.
 //
 
-#include <iostream>
+#include "STLHeader.h"
+#include <string>
 
 int main(int argc, const char * argv[]) {
 	// insert code here...

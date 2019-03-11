@@ -25,6 +25,8 @@
 /* Begin PBXFileReference section */
 		8C6DC9D72236AE440055BCCC /* leetcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leetcode; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C6DC9DA2236AE440055BCCC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8C6DC9E12236AE850055BCCC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8C6DC9E22236AF260055BCCC /* STLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STLHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		8C6DC9CE2236AE440055BCCC = {
 			isa = PBXGroup;
 			children = (
+				8C6DC9E12236AE850055BCCC /* README.md */,
 				8C6DC9D92236AE440055BCCC /* leetcode */,
 				8C6DC9D82236AE440055BCCC /* Products */,
 			);
@@ -58,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				8C6DC9DA2236AE440055BCCC /* main.cpp */,
+				8C6DC9E22236AF260055BCCC /* STLHeader.h */,
 			);
 			path = leetcode;
 			sourceTree = "<group>";
