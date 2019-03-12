@@ -14,7 +14,10 @@ extern "C" {
 #endif
 
 typedef void * ArrayListValue;
-	
+
+/* length --> arraylist item count,
+ * _alloced --> arraylist avaliable size.
+ */
 typedef struct {
   
   ArrayListValue *data;
@@ -24,7 +27,7 @@ typedef struct {
 } ArrayList, *ArrayListRef;
   
 typedef int (*ArrayListEqualFunc)(ArrayListValue value1,
-                                    ArrayListValue value2);
+                                  ArrayListValue value2);
 
 typedef int (*ArrayListCompareFunc)(ArrayListValue value1,
                                     ArrayListValue value2);
@@ -33,9 +36,9 @@ ArrayListRef ALNewArray(unsigned int length);
 
 void ALReleaseArray(ArrayListRef ref);
 
-void ALAppendValue(ArrayListRef ref, ArrayListValue value);
+int ALAppendValue(ArrayListRef ref, ArrayListValue value);
 
-void ALPrePendValue(ArrayListRef ref, ArrayListValue value);
+int ALPrePendValue(ArrayListRef ref, ArrayListValue value);
 
 void ALRemoveValueAtIndex(ArrayListRef ref, unsigned int index);
 
@@ -44,10 +47,12 @@ void ALRemoveValueWithRange(ArrayListRef ref, unsigned int loc, unsigned int len
 int ALInsertValueAtIndex(ArrayListRef ref, ArrayListValue value, unsigned int index);
 
 int ALIndexOfValue(ArrayListRef ref, ArrayListValue value, ArrayListEqualFunc isEqual);
-
-void ALRemoveAll(ArrayListRef ref);
+  
+int ALValueAtIndex(ArrayListRef ref, unsigned int loc, ArrayListValue *valueRef);
 
 void ALSort(ArrayListRef ref, ArrayListCompareFunc compare);
+  
+void ALRemoveAll(ArrayListRef ref);
 	
 #ifdef __cplusplus
 }

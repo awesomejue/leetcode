@@ -9,8 +9,26 @@
 #include "STLHeader.h"
 #include <string>
 
+#include "ArrayList.h"
+
 int main(int argc, const char * argv[]) {
 	// insert code here...
-	std::cout << "Hello, World!\n";
+	
+	ArrayListRef array = ALNewArray(1);
+	
+	char string[] = "abcdefghijk";
+
+	for (int i = 0; i < strlen(string); i++) {
+		ALAppendValue(array, string + i);
+	}
+	
+	for (int i = 0; i < 5; i++) {
+		ALRemoveValueAtIndex(array, array->length - 1);
+	}
+	
+	for (int i = 0; i < array->length; i++) {
+		printf("%c", *(char *)array->data[i]);
+	}
+	
 	return 0;
 }
