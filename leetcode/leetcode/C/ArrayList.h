@@ -47,8 +47,6 @@ void ALRemoveValueWithRange(ArrayListRef ref, unsigned int loc, unsigned int len
 int ALInsertValueAtIndex(ArrayListRef ref, ArrayListValue value, unsigned int index);
 
 int ALIndexOfValue(ArrayListRef ref, ArrayListValue value, ArrayListEqualFunc isEqual);
-  
-int ALValueAtIndex(ArrayListRef ref, unsigned int loc, ArrayListValue *valueRef);
 
 void ALSort(ArrayListRef ref, ArrayListCompareFunc compare);
   

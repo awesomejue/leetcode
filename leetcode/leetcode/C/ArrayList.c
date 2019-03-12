@@ -91,16 +91,6 @@ void ALRemoveValueAtIndex(ArrayListRef ref, unsigned int index)
 	ALRemoveValueWithRange(ref, index, 1);
 }
 
-int ALValueAtIndex(ArrayListRef ref, unsigned int loc, ArrayListValue *valueRef)
-{
-	if (loc > ref->length) {
-		return 1;
-	}
-	
-	*valueRef = ref->data[loc];
-	return 0;
-}
-
 int ALIndexOfValue(ArrayListRef ref, ArrayListValue value, ArrayListEqualFunc isEqual)
 {
 	int i;
