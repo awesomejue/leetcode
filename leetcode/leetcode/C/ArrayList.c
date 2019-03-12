@@ -9,10 +9,30 @@
 #include "ArrayList.h"
 #include "CHeader.h"
 
+static int ALArrayResize(ArrayListRef ref, unsigned int length);
 
 ArrayListRef ALNewArray(unsigned int length)
 {
-	return NULL;
+	ArrayListRef ref = malloc(sizeof(ArrayList));
+	
+	if (ref == NULL)
+		return NULL;
+	
+	ref->data = NULL;
+	ref->length = 0;
+	ref->_alloced = 0;
+	
+	ALArrayResize(ref, length);
+	
+	return ref;
+}
+
+static int ALArrayResize(ArrayListRef ref, unsigned int length)
+{
+	if (ref == NULL)
+		return 0;
+	
+	return 0;
 }
 
 void ALReleaseArray(ArrayListRef ref)
