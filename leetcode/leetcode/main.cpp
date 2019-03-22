@@ -9,6 +9,9 @@
 #include "STLHeader.h"
 #include <string>
 
+#include <thread>
+#include <memory>
+
 #include "ArrayList.h"
 
 int main(int argc, const char * argv[]) {
@@ -29,6 +32,8 @@ int main(int argc, const char * argv[]) {
 	for (int i = 0; i < array->length; i++) {
 		printf("%c", *(char *)array->data[i]);
 	}
+	
+	function<double(double)> foo = sqrt;
 	
 	return 0;
 }
